@@ -6,19 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .main-navigation {
-            display: none;
-        }
-
-        .site-content-contain {
-            padding-top: 78px;
-        }
-
-        @media screen and (max-width:1024px) {
-            .site-content-contain {
-                padding-top: 58px;
-            }
-        }
+       .live-info .live-info-tabs{display:block !important;}
     </style>
 </head>
 
@@ -326,10 +314,6 @@
         </header><!-- #masthead -->
         <div class="site-content-contain" id="main-content">
             <div id="content" class="site-content">
-
-
-
-
                 <div class="wrap">
                     <!-- 轮播图begin -->
                     <div class="slider carousel carousel-home site-main home-main-slider ready">
@@ -669,14 +653,14 @@
                         <section class="live-info rummy-tabs">
                             <div class="desktop-wrap">
                                 <ul class="live-info-tabs rc-tabs clearfix">
-                                    <li class="live-info-tab tab-pill selected"><span class="tab-pill-text">Cash
+                                    <li class="live-info-tab tab-pill selected" data-tab="cash-games"><span class="tab-pill-text">Cash
                                             Games</span>
                                         <div class="selected-indicator"></div>
                                     </li>
-                                    <li class="live-info-tab tab-pill"><span class="tab-pill-text">Tournaments</span>
+                                    <li class="live-info-tab tab-pill" data-tab="tournaments"><span class="tab-pill-text">Tournaments</span>
                                         <div class="selected-indicator"></div>
                                     </li>
-                                    <li class="live-info-tab tab-pill desktop-only"><span
+                                    <li class="live-info-tab visible tab-pill desktop-only" data-tab="practice"><span
                                             class="tab-pill-text">Practice</span>
                                         <div class="selected-indicator"></div>
                                     </li>
@@ -1446,8 +1430,8 @@
                             <div class="desktop-wrap">
                                 <h5 class="rc-experience-title section-title-sec">Ultimate rummy experience!</h5>
                                 <div class="rummy-tabs rc-experience-tabs">
-                                    <section class="tab lobby-tab selected game-lobby rc-tab-detail visible"></section>
-                                    <section class="tab table-tab game-table rc-tab-detail visible"></section>
+                                    <section class="tab lobby-tab selected  game-lobby rc-tab-detail visible rummy-games"></section>
+                                    <section class="tab table-tab  game-table rc-tab-detail visible rummy-games"></section>
                                     <ul class="tab-pills">
                                         <li class="tab-pill selected" data-tab="game-lobby"><span
                                                 class="tab-pill-text">Game lobby</span>
@@ -1948,20 +1932,7 @@
             </svg>
         </div>
     </div>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $(".live-info-tabs .live-info-tab").click(function () {
-
-                $(this).addClass("selected").siblings().removeClass("selected");
-                // $(".live-info-tab-details").eq($(this).index()).show().siblings().hide();
-            })
-            $(".tab-pills .tab-pill").click(function () {
-                $(this).addClass("selected").siblings().removeClass("selected");
-
-            })
-        })
-    </script>
+   
     <div class="video-popup rc-modal-wrap" style="display: none;">
         <div class="modal-close"><svg class="svg-icon modal-close-icon">
                 <use xlink:href="#shape-close" />
@@ -2370,10 +2341,20 @@
             </symbol>
         </svg>
     </div>
-
-
     </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".live-info-tabs .live-info-tab").click(function () {
+                $(this).addClass("selected").siblings().removeClass("selected");
+                $(".live-info-tab-details").eq($(this).index()).show().siblings().hide();
+            })
+            $(".tab-pills .tab-pill").click(function () {
+                $(this).addClass("selected").siblings().removeClass("selected");
+                $(".rummy-games").eq($(this).index()).addClass("selected").siblings().removeClass("selected");
 
+            })
+        })
+    </script>
 </body>
-
 </html>
