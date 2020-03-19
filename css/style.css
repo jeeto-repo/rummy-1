@@ -766,7 +766,7 @@ body {
 }
 
  .live-users .user-img {
-    background: url(https://cdn.rummyculture.com/website/img/user-images.png) no-repeat center;
+    background: url('../images/user-images.png') no-repeat center;
     background-size: 32px 1024px
 }
 
@@ -778,13 +778,13 @@ screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
  .live-users .user-img {
-        background: url(https://cdn.rummyculture.com/website/img/user-images@2x.png) no-repeat center;
+        background: url(../images/user-images@2x.png) no-repeat center;
         background-size: 32px 1024px
     }
 }
 
  .live-users .user-img {
-    background: url(https://cdn.rummyculture.com/website/img/user-images.png) no-repeat center
+    background: url(../images/user-images.png) no-repeat center
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -795,7 +795,7 @@ screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .live-users .user-img {
-        background: url(https://cdn.rummyculture.com/website/img/user-images@2x.png) no-repeat center;
+        background: url(../images/user-images@2x.png) no-repeat center;
         background-size: 32px 1024px
     }
 }
@@ -1743,7 +1743,7 @@ input::-webkit-inner-spin-button {
         margin-top: 5px;
         width: 156px;
         height: 24px;
-        background: url('https://cdn.rummyculture.com/website/img/logo.png') no-repeat center;
+        background: url('../images/logo.png') no-repeat center;
         display: inline-block
     }
 }
@@ -1756,7 +1756,7 @@ screen and (max-width: 1023px) and (min-device-pixel-ratio: 2),
 screen and (max-width: 1023px) and (min-resolution: 192dpi),
 screen and (max-width: 1023px) and (min-resolution: 2dppx) {
     .header-logo {
-        background: url(https://cdn.rummyculture.com/website/img/logo@2x.png) no-repeat center;
+        background: url(../images/logo@2x.png) no-repeat center;
         background-size: 156px 24px
     }
 }
@@ -1766,7 +1766,7 @@ screen and (max-width: 1023px) and (min-resolution: 2dppx) {
         margin-top: 5px;
         width: 208px;
         height: 32px;
-        background: url(https://cdn.rummyculture.com/website/img/logo.png) no-repeat center;
+        background: url(../images/logo.png) no-repeat center;
         display: inline-block
     }
 }
@@ -1779,7 +1779,7 @@ screen and (min-width: 1024px) and (min-device-pixel-ratio: 2),
 screen and (min-width: 1024px) and (min-resolution: 192dpi),
 screen and (min-width: 1024px) and (min-resolution: 2dppx) {
     .header-logo {
-        background: url(https://cdn.rummyculture.com/website/img/logo@2x.png) no-repeat center;
+        background: url(../images/logo@2x.png) no-repeat center;
         background-size: 208px 32px
     }
 }
@@ -1803,10 +1803,10 @@ screen and (min-width: 1024px) and (min-resolution: 2dppx) {
 }
 
 .rummy-sprite {
-    background: url("https://cdn.rummyculture.com/website/img/rummy-sprite.png") no-repeat top left;
+    background: url("../images/rummy-sprite.png") no-repeat top left;
     width: 60px;
     height: 32px;
-    background: url(https://cdn.rummyculture.com/website/img/rummy-sprite.png) no-repeat center
+    background: url(../images/rummy-sprite.png) no-repeat center
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -1817,7 +1817,7 @@ screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .rummy-sprite {
-        background: url(https://cdn.rummyculture.com/website/img/rummy-sprite@2x.png) no-repeat center;
+        background: url(../images/rummy-sprite@2x.png) no-repeat center;
         background-size: 60px 256px
     }
 }
@@ -3474,7 +3474,7 @@ screen and (min-resolution: 2dppx) {
 }
 
 .home .testimonial.video {
-    background-image: url("https://cdn.rummyculture.com/website/img/rummyculture-testimonial-1.jpg")
+    background-image: url("../images/rummyculture-testimonial-1.jpg")
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -3485,7 +3485,7 @@ screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .home .testimonial.video {
-        background-image: url(https://cdn.rummyculture.com/website/img/rummyculture-testimonial-1@2x.jpg)
+        background-image: url(../images/rummyculture-testimonial-1@2x.jpg)
     }
 }
 
@@ -4284,7 +4284,7 @@ screen and (min-resolution: 2dppx) {
 }
 
 .rc-experience .lobby-tab.visible {
-    background: url("https://cdn.rummyculture.com/website/img/game-lobby.png") no-repeat center
+    background: url("../images/game-lobby.png") no-repeat center
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -4295,7 +4295,7 @@ screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .rc-experience .lobby-tab.visible {
-        background: url("https://cdn.rummyculture.com/website/img/game-lobby@2x.png") no-repeat center;
+        background: url("../images/game-lobby@2x.png") no-repeat center;
         background-size: 330px 165px
     }
 }
@@ -4306,7 +4306,7 @@ screen and (min-resolution: 2dppx) {
 }
 
 .rc-experience .table-tab.visible {
-    background: url("https://cdn.rummyculture.com/website/img/game-table.png") no-repeat center
+    background: url("../images/game-table.png") no-repeat center
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -4317,7 +4317,7 @@ screen and (min-device-pixel-ratio: 2),
 screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx) {
     .rc-experience .table-tab.visible {
-        background: url("https://cdn.rummyculture.com/website/img/game-table@2x.png") no-repeat center;
+        background: url("../images/game-table@2x.png") no-repeat center;
         background-size: 330px 165px
     }
 }
@@ -5763,9 +5763,9 @@ screen and (min-resolution: 2dppx) {
         max-height: unset
     }
 
-    .faq-accordian :nth-child(2) {
+    /* .faq-accordian :nth-child(2) {
         display: unset
-    }
+    } */
 
     .faq-accordian .tabs {
         width: 30%
@@ -5776,7 +5776,7 @@ screen and (min-resolution: 2dppx) {
         transform: rotate(0deg)
     }
 
-    .faq-accordian .active {
+    .faq-accordian .active .tab-label{
         color: red
     }
 }
@@ -5790,11 +5790,11 @@ screen and (min-resolution: 2dppx) {
         border: 1px solid #e6e6e6
     }
 
-    .faq-accordian .active {
+    .faq-accordian .active .tab-label{
         color: red
     }
 
-    .faq-accordian .active::after {
+    .faq-accordian .active .tab-label::after {
         transform: rotate(-90deg);
         color: #000
     }
@@ -6181,4 +6181,105 @@ screen and (min-resolution: 2dppx) {
     background-image: -moz-linear-gradient(top, #c51012, #d41439 50%, #02003b);
     background-image: -webkit-linear-gradient(top, #c51012, #d41439 50%, #02003b);
     background-image: linear-gradient(to bottom, #c51012, #d41439 50%, #02003b)
+}
+.live-info .live-info-tabs {
+    display: block !important;
+}
+
+.box {
+    width: 100%;
+    max-height: 768px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.box-1 ul li {
+    width: 100%;
+    max-height: 768px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.box-1 ul li img {
+    display: block;
+    width: 100%;
+}
+
+.box-1 ul li h2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 300px;
+    background: rgba(125, 125, 120, .4);
+    text-indent: 2em;
+    padding-right: 500px;
+    font-size: 15px;
+    line-height: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: normal;
+    color: ghostwhite
+}
+
+.box-2 {
+    display: none;
+}
+
+.box-3 span {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    top: 50%;
+    font-family: "宋体";
+    line-height: 80px;
+    margin-top: -40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box-3 .prev {
+    left: 20px;
+}
+
+.box-3 .next {
+    right: 20px;
+}
+
+.box-3 span::selection {
+    background: transparent;
+}
+
+@media (max-width: 800px) {
+    .box-3 span {
+        display: none;
+    }
+
+    .box-2 {
+        display: block;
+        position: absolute;
+        right: 50%;
+        bottom: 30px;
+        transform: translateX(50%);
+    }
+
+    .box-2 ul li {
+        float: left;
+        width: 12px;
+        height: 12px;
+        overflow: hidden;
+        margin: 0 5px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.5);
+        text-indent: 100px;
+        cursor: pointer;
+    }
+
+    .box-2 ul .on {
+        background: rgba(255, 255, 255, 0.6);
+    }
 }
