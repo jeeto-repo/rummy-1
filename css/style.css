@@ -1505,7 +1505,8 @@ input::-webkit-inner-spin-button {
 .green-android .android-slide {
     position: relative;
     overflow: hidden;
-    padding: 6px 24px
+    padding: 6px 24px;
+    z-index:999;
 }
 
 .green-android .android-slide div:after {
@@ -5884,8 +5885,9 @@ screen and (min-resolution: 2dppx) {
 
 .desktop-login-section {
     position: absolute;
-    top: 19%;
-    right: 10%
+    top: 50%;
+    right: 10%;
+    transform:translateY(-50%)
 }
 
 @media (max-width: 1023px) {
@@ -6186,100 +6188,3 @@ screen and (min-resolution: 2dppx) {
     display: block !important;
 }
 
-.box {
-    width: 100%;
-    max-height: 768px;
-    height: auto;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.box-1 ul li {
-    width: 100%;
-    max-height: 768px;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.box-1 ul li img {
-    display: block;
-    width: 100%;
-}
-
-.box-1 ul li h2 {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 40px;
-    width: 300px;
-    background: rgba(125, 125, 120, .4);
-    text-indent: 2em;
-    padding-right: 500px;
-    font-size: 15px;
-    line-height: 40px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    font-weight: normal;
-    color: ghostwhite
-}
-
-.box-2 {
-    display: none;
-}
-
-.box-3 span {
-    position: absolute;
-    color: white;
-    font-size: 3em;
-    top: 50%;
-    font-family: "宋体";
-    line-height: 80px;
-    margin-top: -40px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.box-3 .prev {
-    left: 20px;
-}
-
-.box-3 .next {
-    right: 20px;
-}
-
-.box-3 span::selection {
-    background: transparent;
-}
-
-@media (max-width: 800px) {
-    .box-3 span {
-        display: none;
-    }
-
-    .box-2 {
-        display: block;
-        position: absolute;
-        right: 50%;
-        bottom: 30px;
-        transform: translateX(50%);
-    }
-
-    .box-2 ul li {
-        float: left;
-        width: 12px;
-        height: 12px;
-        overflow: hidden;
-        margin: 0 5px;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.5);
-        text-indent: 100px;
-        cursor: pointer;
-    }
-
-    .box-2 ul .on {
-        background: rgba(255, 255, 255, 0.6);
-    }
-}

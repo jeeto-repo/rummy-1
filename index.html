@@ -4,8 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-pagination ,.swiper-button-next,.swiper-button-prev{color:#fff !important;}
+    .swiper-pagination{bottom:70px !important;}
+</style>
 
 <body
     class="home page-template-default page page-id-71 twentyseventeen-front-page has-header-image page-two-column colors-light">
@@ -28,7 +72,7 @@
                     </li>
                     <li class="header-link" title="Rummyculture"><a href="#" title="Rummyculture"
                             class=" header-logo"></a></li>
-                    
+
                     <li class="header-link download-option-item header-mid-hidden">
                         <div class="feedback-msg ">
                             <svg class=" success feedback-icon svg-icon">
@@ -58,34 +102,29 @@
                     <div>
                         <!-- 轮播图begin -->
                         <div class="box">
-                            <div class="box-1">
-                                <ul>
-                                    <li>
-                                        <img src="images/lunbo1.jpg"></img>
-                                    </li>
-                                    <li>
-                                        <img src="images/lunbo2.jpg"></img>
-                                    </li>
-                                    <li>
-                                        <img src="images/lunbo3.jpg"></img>
-                                    </li>
-                                    <li>
-                                        <img src="images/lunbo4.jpg"></img>
-                                    </li>
-                                    <li>
-                                        <img src="images/lunbo5.jpg"></img>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="box-2">
-                                <ul>
+                            <div class="swiper-container">
+                                <div class="swiper-container slider carousel carousel-home site-main home-main-slider">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide carousel-cell carousel-home-item">
+                                            <a href="#"> <img   src="images/lunbo1.jpg"  class="home-banner-img" /></a>
+                                        </li>
+                                        <li class="swiper-slide carousel-cell carousel-home-item">
+                                            <a href="#"> <img   src="images/lunbo2.jpg"  class="home-banner-img" /></a>
+                                        </li>
+                                        <li class="swiper-slide carousel-cell carousel-home-item">
+                                            <a href="#"> <img   src="images/lunbo3.jpg"  class="home-banner-img" /></a>
+                                        </li>
+                                        <li class="swiper-slide carousel-cell carousel-home-item">
+                                            <a href="#"> <img   src="images/lunbo4.jpg"  class="home-banner-img" /></a>
+                                        </li>
+                                    </ul>
 
-                                </ul>
-                            </div>
-                            <div class="box-3">
-                                <span class="prev">
-                                    < </span>
-                                        <span class="next"> > </span>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
                         </div>
                         <!-- 轮播图end -->
@@ -101,7 +140,7 @@
                                 <section class="login-section auth-section">
                                     <div class="rummy-tabs login-tabs rc-tabs">
                                         <section class="social-login">
-                                            
+
                                             <p class="one-click-msg">Please enter your Mobile Number</p>
                                         </section>
                                         <section class="rc-tab-detail login ">
@@ -224,7 +263,7 @@
                     <!-- 播放器片段begin 二 -->
                     <section class="why-rummy-culture wraper">
                         <!-- remove this after diwali -->
-                        <div class="desktop-wrap ">
+                        <div class="desktop-wrap " style="z-index: 999;">
                             <div class="why-list why-play-commercial">
                                 <div class="why-play-commercial-row">
                                     <div class="col-center">
@@ -249,7 +288,7 @@
                                                 您的浏览器不支持 HTML5 video 标签。
                                               </video> -->
                                         </div>
-                                        <div >
+                                        <div>
                                             <img id="play-imgbg" src="images/tv-commercial.jpg">
                                             <div class="play" onclick="playVid();">
                                                 <svg class="play-icon">
@@ -370,7 +409,7 @@
                     <div>
                         <section class="live-info rummy-tabs">
                             <div class="desktop-wrap">
-                                <ul class="live-info-tabs rc-tabs clearfix"  style="overflow-x: scroll;">
+                                <ul class="live-info-tabs rc-tabs clearfix" style="overflow-x: scroll;">
                                     <li class="live-info-tab tab-pill selected" data-tab="cash-games"><span
                                             class="tab-pill-text">Cash
                                             Games</span>
@@ -522,7 +561,7 @@
                                     </ul>
                                 </div>
                                 <div class="live-info-tab-details rc-tab-detail tournaments rcarousel">
-                                    <ul class="rcarousel-wrap"  style="overflow-x: scroll;">
+                                    <ul class="rcarousel-wrap" style="overflow-x: scroll;">
                                         <li id="tournament-card-element" class="game-card rcarousel-item tournament">
                                             <div id="tournament-info" href="#">
                                                 <div class="tournament-card-img"
@@ -725,7 +764,7 @@
                                     </ul>
                                 </div>
                                 <div class="live-info-tab-details rc-tab-detail practice desktop-only rcarousel">
-                                    <ul class="rcarousel-wrap"  style="overflow-x: scroll;">
+                                    <ul class="rcarousel-wrap" style="overflow-x: scroll;">
                                         <li class="game-card rcarousel-item practice">
                                             <div class="practice-indicator"></div>
                                             <div class="game-card-img"
@@ -873,7 +912,7 @@
 
 
                     <!-- 第五段落begin -->
-                    
+
                     <!-- 第五段落end -->
 
                     <!-- 第六段落begin -->
@@ -1147,8 +1186,8 @@
                                 </div>
 
                             </div>
-                            
-                            
+
+
                             <div class="footer-section clearfix">
                                 <div class="footer-concern">In case of any concern, <a href="#"
                                         class="link-item-a">Contact
@@ -1202,7 +1241,7 @@
         </div>
     </div>
 
-    
+
     <div style="height:0px; overflow:hidden;">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <symbol viewBox="0 0 72 72" id="shape-offer">
@@ -1520,8 +1559,9 @@
         </svg>
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/index.js"></script>
-        
+
     <script>
         $(function () {
             $(".live-info-tabs .live-info-tab").click(function () {
@@ -1539,6 +1579,18 @@
 
             })
         })
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     </script>
 </body>
+
 </html>
