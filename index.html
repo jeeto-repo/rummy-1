@@ -245,7 +245,7 @@
                     </div>
 
                     <div class="social-players home-download-wraper mobile-only">
-                        <a class="android-btn-a green-android home-page-download-btn">
+                        <a class="android-btn-a green-android home-page-download-btn android-download-btn">
                             <button class="btn android-btn  android-slide">
                                 <svg class="svg-icon android-icon">
                                     <use xlink:href="#shape-android-white"></use>
@@ -255,7 +255,7 @@
 
                                 </div>
                             </button> </a>
-                        <a class="ios-hide ios-download white-ios" href="#">
+                        <a class="ios-hide ios-download white-ios ios-download-btn" href="#">
                             <button class="btn ios-btn ios-slide ">
                                 <svg class="svg-icon android-icon">
                                     <use xlink:href="#shape-ios-white"></use>
@@ -447,7 +447,7 @@
                                         <li class="game-card rcarousel-item">
                                             <img src="images/card4.png" alt="">
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
                                 <div class="live-info-tab-details rc-tab-detail tournaments rcarousel">
@@ -464,8 +464,8 @@
                                         <li id="tournament-card-element" class="game-card rcarousel-item tournament">
                                             <img src="images/card8.png" alt="">
                                         </li>
-                                        
-                                        
+
+
                                     </ul>
                                 </div>
                                 <div class="live-info-tab-details rc-tab-detail practice desktop-only rcarousel">
@@ -672,9 +672,9 @@
                                 <h5 class="rc-experience-title section-title-sec">Ultimate rummy experience!</h5>
                                 <div class="rummy-tabs rc-experience-tabs">
                                     <section
-                                        class="tab lobby-tab selected  game-lobby rc-tab-detail visible rummy-games" >
+                                        class="tab lobby-tab selected  game-lobby rc-tab-detail visible rummy-games">
                                     </section>
-                                    <section class="tab table-tab  game-table rc-tab-detail visible rummy-games" >
+                                    <section class="tab table-tab  game-table rc-tab-detail visible rummy-games">
                                     </section>
                                     <ul class="tab-pills">
                                         <li class="tab-pill selected" data-tab="game-lobby"><span
@@ -727,9 +727,11 @@
                                 <div class="link-section">
                                     <h5 class="link-section-title">Links</h5>
                                     <ul class="links-list">
-                                        <li class="link-item"><a href="pages/privacyPolicy.html" class="link-item-a">Privacy Policy</a>
+                                        <li class="link-item"><a href="pages/privacyPolicy.html"
+                                                class="link-item-a">Privacy Policy</a>
                                         </li>
-                                        <li class="link-item"><a href="pages/playResponsibly.html" class="link-item-a">Play responsibly</a></li>
+                                        <li class="link-item"><a href="pages/playResponsibly.html"
+                                                class="link-item-a">Play responsibly</a></li>
                                     </ul>
                                 </div>
 
@@ -752,7 +754,50 @@
             </div>
         </div>
     </div>
+    <!-- show-download-app-footer -->
+    <div class="download-app-footer  mobile-only">
+        <div class="download-banner-img">
+            <img class="footer-app-download-button-img" src="images/footer-img.png">
+        </div>
+        <div class="footer-app-download-button">
+            <p class="footer-app-download-button-text">Play Rummy Anytime Anywhere.</p>
+            <a href="https://cdn-app.rummyculture.com/apks/currentRelease/RummyCulture.apk"
+                class=" iosplatform-btn ios-download black-ios ios-footer ios-download-btn" style="display: none;">
+                <button class="btn ios-btn ios-slide ">
+                    <svg class="svg-icon android-icon">
+                        <use xlink:href="#shape-ios-white"></use>
+                    </svg>
+                    <div class="android-btn-c">
+                        <div class="ios-btn-text">Download iOS App</div>
+                    </div>
+                </button> </a>
+            <a class="android-btn-a androidplatform-btn green-android android-download-btn" >
+                <button class="btn android-btn footer-app-download-btn android-slide">
+                    <svg class="svg-icon android-icon">
+                        <use xlink:href="#shape-android-white"></use>
+                    </svg>
+                    <div class="android-btn-c">
+                        <div class="android-btn-text">Download Android App</div>
 
+                    </div>
+                </button>
+                <div class="footer-app-download-feedback">
+                    <div class="download-feedback app-download-link " style="display: none;">
+
+                        <p style="display:none;color: red"></p>
+                        <pstyle='display:none; id="app-download-btn-info">
+                            <p></p>
+                        </pstyle='display:none;><iframe style="display:none;"></iframe>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="download-app-min-button">
+            <svg class="svg-icon dl-right">
+                <use xlink:href="#shape-dl-right"></use>
+            </svg>
+        </div>
+    </div>
 
     <div style="height:0px; overflow:hidden;">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -1076,6 +1121,9 @@
 
     <script>
         $(function () {
+         
+    
+
             $(".live-info-tabs .live-info-tab").click(function () {
                 $(this).addClass("selected").siblings().removeClass("selected");
                 $(".live-info-tab-details").eq($(this).index()).show().siblings().hide();
@@ -1089,6 +1137,20 @@
                 $(this).addClass("active").siblings().removeClass("active");
                 $(this).next().show().siblings('.tab-content').hide();
             })
+            var u = navigator.userAgent;
+            var ua = navigator.userAgent.toLowerCase();
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if(isiOS){
+                $(".ios-download-btn").show();
+                $(".android-download-btn").hide();
+               
+                
+            }else if(isAndroid){
+                $(".android-download-btn").show();
+                $(".ios-download-btn").hide();
+            }
+
         })
 
         var swiper = new Swiper('.swiper-container', {
@@ -1101,6 +1163,9 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+       
+        
+
     </script>
 </body>
 

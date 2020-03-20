@@ -370,7 +370,7 @@ summary {
 @media screen and (max-width: 768px) {
     .show-download-app-footer {
         display: block;
-        z-index: 3
+        z-index: 888
     }
 }
 
@@ -1441,7 +1441,8 @@ input::-webkit-inner-spin-button {
 .ios-btn {
     font-size: 14px;
     line-height: 17px;
-    margin-top: 6%
+    margin-top: 6%;
+    z-index:666;
 }
 
 .download-btn {
@@ -2914,7 +2915,7 @@ footer .new-label {
 @media screen and (max-width: 768px) {
     .show-download-app-footer {
         display: block;
-        z-index: 3
+        z-index: 888
     }
 }
 
@@ -3285,7 +3286,7 @@ screen and (min-width: 1024px) and (min-resolution: 2dppx) {
 @media screen and (max-width: 768px) {
     .show-download-app-footer {
         display: block;
-        z-index: 3
+        z-index: 888
     }
 }
 
