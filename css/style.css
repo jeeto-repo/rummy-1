@@ -5764,9 +5764,9 @@ screen and (min-resolution: 2dppx) {
         max-height: unset
     }
 
-    /* .faq-accordian :nth-child(2) {
+    .faq-accordian :nth-child(2) {
         display: unset
-    } */
+    }
 
     .faq-accordian .tabs {
         width: 30%
