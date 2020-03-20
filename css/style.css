@@ -3368,7 +3368,7 @@ screen and (min-resolution: 2dppx) {
 .home .why-rummy-details {
     display: inline-block;
     vertical-align: top;
-    width: calc(100% - 48px);
+    width: calc(100% - 52px);
     padding-left: 16px
 }
 
@@ -5893,7 +5893,7 @@ screen and (min-resolution: 2dppx) {
         width: 233vw;
         transform: translateX(-11%) !important
     }
-
+  
     .carousel-home {
         min-height: 100vw
     }
