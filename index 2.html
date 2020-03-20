@@ -28,7 +28,15 @@
                     </li>
                     <li class="header-link" title="Rummyculture"><a href="#" title="Rummyculture"
                             class=" header-logo"></a></li>
-                    
+                    <li class="header-link live-users-item">
+                        <div class="live-users">
+
+                            <div class="players-count">
+                                <div class="players-count-val"></div>
+                                <div class="players-count-label">Online Now</div>
+                            </div>
+                        </div>
+                    </li>
                     <li class="header-link download-option-item header-mid-hidden">
                         <div class="feedback-msg ">
                             <svg class=" success feedback-icon svg-icon">
@@ -47,6 +55,20 @@
                             </div>
                         </form>
                     </li>
+                    <li class="header-link right login-link header-action"><button class="btn login-btn"
+                            id="LoginSignupButton">
+
+                            <svg class="svg-icon lock-icon">
+                                <use xlink:href="#shape-lock" />
+                            </svg>
+                            <span class="login-btn-label desktop-only">Login</span><span
+                                class="login-btn-label mobile-only">Register/Login</span>
+
+                        </button><button class="btn " id="GotoLobbyButton">
+
+                            <span class="login-btn-label ">Lobby</span>
+                        </button></li>
+
                 </ul>
             </div>
         </header>
@@ -101,8 +123,27 @@
                                 <section class="login-section auth-section">
                                     <div class="rummy-tabs login-tabs rc-tabs">
                                         <section class="social-login">
-                                            
-                                            <p class="one-click-msg">Please enter your Mobile Number</p>
+                                            <p class="one-click-msg">Login in one click</p>
+                                            <div class="social-btns  social-login-top">
+                                                <button class="social-btn fb btn">
+                                                    <svg class="svg-icon social-icon">
+                                                        <use xlink:href="#shape-f-login" />
+                                                    </svg>
+                                                    <span class="social-btn-txt"><span class="with-label">with
+                                                        </span>Facebook</span><svg class="svg-icon spinner-icon">
+                                                        <use xlink:href="#shape-spinner-light" />
+                                                    </svg>
+                                                </button><button class="social-btn btn gplus">
+                                                    <svg class="svg-icon social-icon">
+                                                        <use xlink:href="#shape-g-login" />
+                                                    </svg>
+                                                    <span class="social-btn-txt"><span class="with-label">with
+                                                        </span>Google</span><svg class="svg-icon spinner-icon">
+                                                        <use xlink:href="#shape-spinner-light" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <p class="one-click-msg">Or enter your details</p>
                                         </section>
                                         <section class="rc-tab-detail login ">
                                             <div class="login-row">
@@ -183,7 +224,7 @@
                                             <div class="login-row">
                                                 <button class="btn btn-yellow login-btn register">
 
-                                                    <span class="login-btn-txt">Get Link</span>
+                                                    <span class="login-btn-txt">Continue</span>
                                                     <svg class="svg-icon spinner-icon">
                                                         <use xlink:href="#shape-spinner" />
                                                     </svg>
@@ -219,6 +260,10 @@
                             </button> </a>
                         <div class="download-feedback  download-feedback-home-page ">
                         </div>
+                        <p class="no-downloads">
+                            🔥 <span class="app-download-count">0</span> downloads in last 12 hours
+                        </p>
+
                     </div>
 
                     <!-- 播放器片段begin 二 -->
@@ -1108,7 +1153,7 @@
 
                     <!-- 第八段落begin -->
                     <!-- 第八段落end -->
-
+                    
                     <!-- 第九段落begin -->
                     <footer id="colophon" class="site-footer" role="contentinfo">
                         <div class="desktop-wrap">
@@ -1134,6 +1179,10 @@
                                     <ul class="links-list">
                                         <li class="link-item"><a href="#" class="link-item-a">About Us</a></li>
                                         <li class="link-item"><a href="#" class="link-item-a">Contact Us</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Blog</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">FAQ's</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Sitemap</a></li>
+
                                     </ul>
 
                                 </div>
@@ -1141,15 +1190,111 @@
                                     <h5 class="link-section-title">Links</h5>
                                     <ul class="links-list">
                                         <li class="link-item"><a href="#" class="link-item-a">Testimonials</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Terms of
+                                                service</a></li>
                                         <li class="link-item"><a href="#" class="link-item-a">Privacy Policy</a>
                                         </li>
-                                        <li class="link-item"><a href="#" class="link-item-a">Play responsibly</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Withdrawals</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Play
+                                                responsibly</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Legality</a></li>
+                                    </ul>
+                                </div>
+                                <div class="link-section">
+                                    <h5 class="link-section-title">Links</h5>
+                                    <ul class="links-list">
+                                        <li class="link-item"><a href="#" class="link-item-a">Download app</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">How to play<label
+                                                    class="new-label">NEW</label></a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Offers</a></li>
+                                        <li class="link-item"><a href="#" class="link-item-a">Referral</a></li>
+
                                     </ul>
                                 </div>
 
                             </div>
-                            
-                            
+                            <div class="footer-social footer-section footer-inline">
+                                <h5 class="footer-section-title">Social</h5>
+                                <ul class="social-links">
+                                    <li class="social-link">
+                                        <a class="social-link-a" target="_blank" href="#" title="Facebook">
+                                            <svg class="svg-icon social">
+                                                <use xlink:href="#shape-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-link">
+                                        <a class="social-link-a" target="_blank" href="#" title="Instagram">
+                                            <svg class="svg-icon social">
+                                                <use xlink:href="#shape-instagram"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-link">
+                                        <a class="social-link-a" target="_blank" href="#" title="Twitter">
+                                            <svg class="svg-icon social">
+                                                <use xlink:href="#shape-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-link">
+                                        <a class="social-link-a" target="_blank" href="#" title="Google">
+                                            <svg class="svg-icon social">
+                                                <use xlink:href="#shape-google-plus"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-payments-section">
+                                <div class="secure-section footer-section payments">
+                                    <h5 class="footer-section-title">Secured payments by</h5>
+                                    <ul class="payment-gateways">
+                                        <li class="payment-gateway paytm rummy-sprite">
+
+                                        </li>
+                                        <li class="payment-gateway payu rummy-sprite">
+
+                                        </li>
+                                        <li class="payment-gateway cashfree rummy-sprite">
+
+                                        </li>
+                                        <li class="payment-gateway visa rummy-sprite">
+
+                                        </li>
+
+                                    </ul>
+                                    <ul class="payment-gateways">
+                                        <li class="payment-gateway mastercard rummy-sprite">
+
+                                        </li>
+                                        <li class="payment-gateway rupay rummy-sprite">
+
+                                        </li>
+                                        <li class="payment-gateway upi rummy-sprite">
+
+                                        </li>
+                                        <li class="payment-gateway netbanking rummy-sprite">
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="secure-section footer-section">
+                                    <h5 class="footer-section-title">Secured connection by</h5>
+                                    <div style="display: inline-flex;"><a href="#">
+                                            <img name="seal" class="thawte-certified-batch"
+                                                oncontextmenu="return false;" src="images/getthawteseal.gif">
+                                        </a></div>
+                                    <div style="display: inline-flex;">
+                                        <a href="#" target="_blank">
+                                            <img class="rng-certified-batch"
+                                                src="images/Rummy-culture-rng-certified.webp">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
                             <div class="footer-section clearfix">
                                 <div class="footer-concern">In case of any concern, <a href="#"
                                         class="link-item-a">Contact

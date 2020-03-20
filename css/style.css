@@ -4899,7 +4899,7 @@ screen and (min-resolution: 2dppx) {
 
 .login-section .login-msg,
 .auth-section .login-msg {
-    margin-top: 56px;
+    margin-top: 26px;
     margin-bottom: 8px;
     font-weight: normal;
     color: #fff
