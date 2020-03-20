@@ -4411,8 +4411,6 @@ screen and (min-resolution: 2dppx) {
 
 .game-card {
     margin-top: 16px;
-    padding: 16px;
-    background-color: #fff;
     display: inline-block;
     color: #02003b;
     border-radius: 4px;
@@ -6188,3 +6186,5 @@ screen and (min-resolution: 2dppx) {
     display: block !important;
 }
 
+.rummy-games{margin:0 auto !important;}
+.desktop-wrap .section-title-sec{text-align:center;}
