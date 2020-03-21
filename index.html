@@ -55,8 +55,12 @@
     }
 
     .swiper-pagination {
-        bottom: 70px !important;
+        bottom: 50px !important;
     }
+    .swiper-pagination-bullet-active {
+        background-color:#fff;
+    }
+    
 </style>
 
 <body
@@ -126,13 +130,12 @@
                                             <a href="#"> <img src="images/lunbo4.jpg" class="home-banner-img" /></a>
                                         </li>
                                     </ul>
-
                                 </div>
                                 <!-- Add Pagination -->
-                                <div class="swiper-pagination"></div>
+                                <div class="swiper-pagination mobile-only"></div>
                                 <!-- Add Arrows -->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next desktop-only"></div>
+                                <div class="swiper-button-prev desktop-only"></div>
                             </div>
                         </div>
                         <!-- 轮播图end -->
@@ -244,7 +247,7 @@
                         <!-- 登录表单end -->
                     </div>
 
-                    <div class="social-players home-download-wraper mobile-only">
+                    <div class="social-players home-download-wraper mobile-only" style="margin-bottom:20px;">
                         <a class="android-btn-a green-android home-page-download-btn android-download-btn">
                             <button class="btn android-btn  android-slide">
                                 <svg class="svg-icon android-icon">
@@ -1105,12 +1108,16 @@
         var swiper = new Swiper('.swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
-                type: 'fraction',
+                type: 'bullets',
+                color:'#fff'
             },
+
+        loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            
         });
         // function playVid() {
         //     var video = this.document.getElementById('video1');
