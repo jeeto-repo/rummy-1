@@ -289,16 +289,17 @@
                                     </div>
                                 </div>
                                 <div class="overlay-video">
-                                    <div class="youtube-player" id="home-commertial">
-                                        <div id="home-commertial-player">
-                                            <!-- <video id="video1" width="100%" height="240" z-index="9999">
-                                                <source src="paomian.mp4"  type="video/mp4">
+                                    <div class="youtube-player" id="home-commertial" >
+                                        <div id="home-commertial-player" style="text-align: center;" >
+                                            <video id="video1" poster="images/tv-commercial.jpg" style="object-fit:fill" 
+                                            x5-video-player-type="h5" playsinline webkit-playsinline z-index="9999">
+                                                <source src="video/zyh.mp4"  type="video/mp4">
                                                 您的浏览器不支持 HTML5 video 标签。
-                                              </video> -->
+                                              </video>
                                         </div>
                                         <div>
-                                            <img id="play-imgbg" src="images/tv-commercial.jpg">
-                                            <div class="play" onclick="playVid();">
+                                            <!-- <img id="play-imgbg" src="images/tv-commercial.jpg"> -->
+                                            <div class="play" onclick="playVid();" >
                                                 <svg class="play-icon">
                                                     <use xlink:href="#shape-white-play"></use>
                                                     <symbol viewBox="0 0 200 200" id="shape-white-play">
@@ -1054,9 +1055,6 @@
 
     <script>
         $(function () {
-         
-    
-
             $(".live-info-tabs .live-info-tab").click(function () {
                 $(this).addClass("selected").siblings().removeClass("selected");
                 $(".live-info-tab-details").eq($(this).index()).show().siblings().hide();
@@ -1096,9 +1094,14 @@
                 prevEl: '.swiper-button-prev',
             },
         });
-       
+        function playVid(){
+            var video = this.document.getElementById('video1');
+            video.play();
+            $('.play').hide();
+            video.setAttribute('controls',true);
+           
+        }
         
-
     </script>
 </body>
 

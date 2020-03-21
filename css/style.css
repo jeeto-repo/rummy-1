@@ -6119,7 +6119,7 @@ screen and (min-resolution: 2dppx) {
 
 .youtube-player {
     position: relative;
-    padding-bottom: 56.23%;
+    /* padding-bottom: 56.23%; */
     height: 0;
     overflow: hidden;
     max-width: 100%;
