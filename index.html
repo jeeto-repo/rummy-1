@@ -426,25 +426,43 @@
                     <div>
                         <section class="live-info rummy-tabs">
                             <div class="desktop-wrap">
+                                <!-- 只在pc端展示类名 desktop-only -->
                                 <ul class="live-info-tabs rc-tabs clearfix" style="overflow-x: scroll;">
-                                    <li class="live-info-tab tab-pill selected" data-tab="cash-games"><span
+                                    <li class="live-info-tab visible tab-pill selected " data-tab="practice"><span
+                                            class="tab-pill-text">Practice</span>
+                                        <div class="selected-indicator"></div>
+                                    </li>
+                                    <li class="live-info-tab tab-pill" data-tab="cash-games"><span
                                             class="tab-pill-text">Cash
                                             Games</span>
                                         <div class="selected-indicator"></div>
                                     </li>
-                                    <li class="live-info-tab tab-pill" data-tab="tournaments"><span
+                                    <li class="live-info-tab tab-pill" data-tab="tournaments" style="display: none;"><span
                                             class="tab-pill-text">Tournaments</span>
                                         <div class="selected-indicator"></div>
                                     </li>
-                                    <li class="live-info-tab visible tab-pill desktop-only" data-tab="practice"><span
-                                            class="tab-pill-text">Practice</span>
-                                        <div class="selected-indicator"></div>
-                                    </li>
+                                    
 
                                 </ul>
-                                <div class="live-info-tab-details rc-tab-detail cash-games rcarousel selected">
+                                <div class="live-info-tab-details rc-tab-detail practice rcarousel selected">
                                     <ul class="rcarousel-wrap" style="overflow-x: scroll;">
-                                        <li class="game-card rcarousel-item">
+                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
+                                            <img src="images/card9.png" alt="">
+                                        </li>
+                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
+                                            <img src="images/card10.png" alt="">
+                                        </li>
+                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
+                                            <img src="images/card11.png" alt="">
+                                        </li>
+                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
+                                            <img src="images/card12.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="live-info-tab-details rc-tab-detail cash-games rcarousel">
+                                    <ul class="rcarousel-wrap" style="overflow-x: scroll;text-align: center;">
+                                        <!-- <li class="game-card rcarousel-item">
                                             <img src="images/card1.png" alt="">
                                         </li>
                                         <li class="game-card rcarousel-item">
@@ -455,11 +473,11 @@
                                         </li>
                                         <li class="game-card rcarousel-item">
                                             <img src="images/card4.png" alt="">
-                                        </li>
-
+                                        </li> -->
+                                            <h2 style="color:#fff;margin-top:100px;">The feature is coming soon~~</h2>
                                     </ul>
                                 </div>
-                                <div class="live-info-tab-details rc-tab-detail tournaments rcarousel">
+                                <div class="live-info-tab-details rc-tab-detail tournaments rcarousel" style="display: none;">
                                     <ul class="rcarousel-wrap" style="overflow-x: scroll;">
                                         <li id="tournament-card-element" class="game-card rcarousel-item tournament">
                                             <img src="images/card5.png" alt="">
@@ -477,22 +495,7 @@
 
                                     </ul>
                                 </div>
-                                <div class="live-info-tab-details rc-tab-detail practice desktop-only rcarousel">
-                                    <ul class="rcarousel-wrap" style="overflow-x: scroll;">
-                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
-                                            <img src="images/card9.png" alt="">
-                                        </li>
-                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
-                                            <img src="images/card10.png" alt="">
-                                        </li>
-                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
-                                            <img src="images/card11.png" alt="">
-                                        </li>
-                                        <li id="tournament-card-element" class="game-card rcarousel-item tournament">
-                                            <img src="images/card12.png" alt="">
-                                        </li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </section>
                     </div>
