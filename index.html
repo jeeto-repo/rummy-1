@@ -75,17 +75,11 @@
                             <use xlink:href="#shape-hamburger" />
                         </svg>
                     </li>
-                    <li class="header-link back-link main-back-link" title="Back">
-
-                        <svg class="header-icon svg-icon">
-                            <use xlink:href="#shape-back" />
-                        </svg>
-
-                    </li>
+                        
                     <li class="header-link" title="JeetoRummy"><a href="#" title="JeetoRummy"
                             class=" header-logo"></a></li>
 
-                    <li class="header-link download-option-item header-mid-hidden">
+                    <li class="header-link download-option-item ">
                         <div class="feedback-msg ">
                             <svg class=" success feedback-icon svg-icon">
                                 <use xlink:href="#shape-check-success" />
@@ -150,83 +144,16 @@
                                 </div>
                                 <section class="login-section auth-section">
                                     <div class="rummy-tabs login-tabs rc-tabs">
-                                        <section class="social-login">
-
-                                            <p class="one-click-msg">Please enter your Mobile Number</p>
-                                        </section>
-                                        <section class="rc-tab-detail login ">
-                                            <div class="login-row">
-                                                <input class="login-input" placeholder="Your email id/mobile"
-                                                    aria-label="Email id" name="username" />
-                                                <div class="input-msg">Please enter valid email</div>
-                                                <svg class="feedback-icon svg-icon">
-                                                    <use xlink:href="#shape-check-success" />
-                                                </svg>
-                                            </div>
-                                            <div class="login-row">
-                                                <input class="login-input" placeholder="Secure password" type="password"
-                                                    aria-label="Password" name="password" />
-                                                <div class="input-msg">Please enter valid password</div>
-                                                <svg class="password-icon svg-icon show-password" title="Show password">
-                                                    <use xlink:href="#shape-password-eye" />
-                                                </svg>
-                                                <svg class="password-icon svg-icon hide-password" title="Show password">
-                                                    <use xlink:href="#shape-password-eye-close" />
-                                                </svg>
-                                            </div>
-                                            <div class="captcha-container"></div>
-
-                                            <p class="forgot-c">
-                                                <a href="#" class="fp-link">Forgot password?</a>
-                                            </p>
-                                            <div class="alert danger"></div>
-                                            
-                                            <div class="login-row">
-                                                <button class="btn btn-yellow login-btn login"><svg
-                                                        class="svg-icon lock-icon">
-                                                        <use xlink:href="#shape-lock" />
-                                                    </svg> <span class="login-btn-txt">Login</span> <svg
-                                                        class="svg-icon spinner-icon">
-                                                        <use xlink:href="#shape-spinner" />
-                                                    </svg></button>
-                                            </div>
-                                        </section>
                                         <section class="rc-tab-detail register selected">
                                             <div class="login-row">
-                                                <span class="otp-msg" style="display:none;">
-                                                    OTP sent to <span id="otp-num"></span>
-                                                </span>
-                                                <span class="num-edit" style="display:none;">
-                                                    EDIT
-                                                </span>
-                                            </div>
-                                            <div class="login-row">
-                                                <input class="login-input" placeholder="Enter Mobile Number"
+                                                <input class="login-input" placeholder="Enter Mobile No."
                                                     type="number" aria-label="Mobile Number" name="mobile" />
-                                                <div class="input-msg">Please enter valid mobile</div>
                                                 <svg class="feedback-icon svg-icon">
                                                     <use xlink:href="#shape-check-success" />
                                                 </svg>
                                             </div>
-                                            <div class="login-row" style="display:none;">
-                                                <input class="login-input" placeholder="Enter OTP" type="number"
-                                                    aria-label="OTP" name="otp" />
-                                                <div class="input-msg">Please enter valid OTP</div>
-                                                <svg class="feedback-icon svg-icon">
-                                                    <use xlink:href="#shape-check-success" />
-                                                </svg>
-                                            </div>
-                                            <div class="login-row" style="display:none;">
-                                                <span id="otp-feedback-text"></span>
-                                            </div>
-
-                                            <p class="login-msg">
-                                                 <a class="terms-link" href="pages/privacyPolicy.html">By registering you are agreeing to our Privacy Policy</a>
-                                            </p>
-                                            <div class="alert danger"></div>
-                                            <div class="login-row">
+                                            <div class="login-row" style="margin-top:50px;">
                                                 <button class="btn btn-yellow login-btn register">
-
                                                     <span class="login-btn-txt">Get Link</span>
                                                     <svg class="svg-icon spinner-icon">
                                                         <use xlink:href="#shape-spinner" />
@@ -1020,6 +947,8 @@
                 $(".android-download-btn").show();
                 $(".ios-download-btn").hide();
             }
+
+           
 
         })
 
