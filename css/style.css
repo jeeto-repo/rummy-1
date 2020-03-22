@@ -3711,7 +3711,7 @@ screen and (min-resolution: 2dppx) {
 
     .home .live-info-tabs {
         padding: 36px 16px 0px 16px;
-        text-align: center
+        text-align: left
     }
 
     .home .tab-pill:nth-child(2) {
@@ -5884,9 +5884,9 @@ screen and (min-resolution: 2dppx) {
 
 .desktop-login-section {
     position: absolute;
-    top: 50%;
+    top: 130px;
     right: 10%;
-    transform:translateY(-50%)
+   
 }
 
 @media (max-width: 1023px) {
