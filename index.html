@@ -10,8 +10,8 @@
 <style>
     html,
     body {
-        position: relative;
-        height: 100%;
+        position: relative !important;
+        /* height: 100%; */
     }
 
     body {
@@ -57,10 +57,10 @@
     .swiper-pagination {
         bottom: 50px !important;
     }
+
     .swiper-pagination-bullet-active {
-        background-color:#fff;
+        background-color: #fff;
     }
-    
 </style>
 
 <body
@@ -75,11 +75,11 @@
                             <use xlink:href="#shape-hamburger" />
                         </svg>
                     </li>
-                        
-                    <li class="header-link" title="JeetoRummy"><a href="#" title="JeetoRummy"
-                            class=" header-logo"></a></li>
 
-                    <li class="header-link download-option-item ">
+                    <li class="header-link" title="JeetoRummy"><a href="#" title="JeetoRummy" class=" header-logo"></a>
+                    </li>
+
+                    <li class="header-link download-option-item desktop-only header-mid-hidden">
                         <div class="feedback-msg ">
                             <svg class=" success feedback-icon svg-icon">
                                 <use xlink:href="#shape-check-success" />
@@ -107,7 +107,7 @@
                     <!-- 第一段落 -->
                     <div>
                         <!-- 轮播图begin -->
-                        <div class="box">
+                        <div class="box" id="box">
                             <div class="swiper-container">
                                 <div class="swiper-container slider carousel carousel-home site-main home-main-slider">
                                     <ul class="swiper-wrapper">
@@ -138,7 +138,7 @@
                         <div class="desktop-login-section" style="z-index: 2;">
                             <div class="register-desktop-section">
                                 <div class="register-msg">
-                                    <span class="register-msg-txt">  Join to get upto </span> <span
+                                    <span class="register-msg-txt"> Join to get upto </span> <span
                                         class="register-bonus">₹5250
                                         Bonus</span>
                                 </div>
@@ -146,8 +146,8 @@
                                     <div class="rummy-tabs login-tabs rc-tabs">
                                         <section class="rc-tab-detail register selected">
                                             <div class="login-row">
-                                                <input class="login-input" placeholder="Enter Mobile No."
-                                                    type="number" aria-label="Mobile Number" name="mobile" />
+                                                <input class="login-input" placeholder="Enter Mobile No." type="number"
+                                                    aria-label="Mobile Number" name="mobile" />
                                                 <svg class="feedback-icon svg-icon">
                                                     <use xlink:href="#shape-check-success" />
                                                 </svg>
@@ -221,14 +221,15 @@
                                                 您的浏览器不支持 HTML5 video 标签。
                                               </video> -->
                                             <iframe width="642" height="339"
-                                                src="https://www.youtube.com/embed/X9tU8ybzcFs" frameborder="0" poster="images/tv-commercial.jpg"
+                                                src="https://www.youtube.com/embed/X9tU8ybzcFs" frameborder="0"
+                                                poster="images/tv-commercial.jpg"
                                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                                 allowfullscreen></iframe>
                                         </div>
                                         <div>
                                             <!-- <img id="play-imgbg" src="images/tv-commercial.jpg"> -->
                                             <!-- onclick="playVid();" -->
-                                            <div class="play" >
+                                            <div class="play">
                                                 <svg class="play-icon">
                                                     <use xlink:href="#shape-white-play"></use>
                                                     <symbol viewBox="0 0 200 200" id="shape-white-play">
@@ -353,7 +354,7 @@
                                             class="tab-pill-text">Practice</span>
                                         <div class="selected-indicator"></div>
                                     </li>
-                                    
+
                                 </ul>
                                 <!-- <div class="tips-box"> the feature is comming soon</div> -->
                                 <div class="live-info-tab-details rc-tab-detail practice rcarousel selected">
@@ -372,9 +373,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                                
-                                
-                                
+
+
+
                             </div>
                         </section>
                     </div>
@@ -460,7 +461,7 @@
                                             <p><strong>8. Supports over 5+ Local Languages.</strong></p>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                         </section>
                     </div>
@@ -521,8 +522,10 @@
                                 <div class="link-section">
                                     <h5 class="link-section-title">Company</h5>
                                     <ul class="links-list">
-                                        <li class="link-item"><a href="pages/about.html" class="link-item-a">About Us</a></li>
-                                        <li class="link-item"><a href="pages/about.html" class="link-item-a">Contact Us</a></li>
+                                        <li class="link-item"><a href="pages/about.html" class="link-item-a">About
+                                                Us</a></li>
+                                        <li class="link-item"><a href="pages/about.html" class="link-item-a">Contact
+                                                Us</a></li>
                                     </ul>
 
                                 </div>
@@ -532,7 +535,7 @@
                                         <li class="link-item"><a href="pages/privacyPolicy.html"
                                                 class="link-item-a">Privacy Policy</a>
                                         </li>
-                                       
+
                                     </ul>
                                 </div>
 
@@ -543,7 +546,7 @@
                                 <div class="footer-concern">In case of any concern, <a href="pages/about.html"
                                         class="link-item-a">Contact
                                         Us</a></div>
-                                <div class="footer-copy"> Copyright ® 2020,  JeetoRummy.com | From India, for India
+                                <div class="footer-copy"> Copyright ® 2020, JeetoRummy.com | From India, for India
                                 </div>
                             </div>
 
@@ -558,11 +561,13 @@
     <!-- show-download-app-footer -->
     <div class="download-app-footer  mobile-only">
 
-       
+        <div class="download-banner-img">
+            <img class="footer-app-download-button-img"  src="images/footer-img.png">
+        </div>
         <div class="footer-app-download-button">
             <p class="footer-app-download-button-text">Play Rummy Anytime Anywhere.</p>
-            <a href="#"
-                class=" iosplatform-btn ios-download black-ios ios-footer ios-download-btn" style="display: none;">
+            <a href="#" class=" iosplatform-btn ios-download black-ios ios-footer ios-download-btn"
+                style="display: none;">
                 <button class="btn ios-btn ios-slide ">
                     <svg class="svg-icon android-icon">
                         <use xlink:href="#shape-ios-white"></use>
@@ -921,6 +926,24 @@
 
     <script>
         $(function () {
+            window.onscroll = function() {
+                var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
+                var formHeight = document.getElementById("box").offsetHeight;
+				if (scrTop >= 300) {
+					$('.download-option-item').addClass('header-mid-visible').removeClass('header-mid-hidden');
+				} else {
+					// 隐藏
+					$('.download-option-item').addClass('header-mid-hidden').removeClass('header-mid-visible');
+                }
+                if (scrTop >= formHeight) {
+					$('.download-app-footer').fadeIn();
+				} else {
+					// 隐藏
+					$('.download-app-footer').fadeOut();
+				}
+				
+            }
+           
             $(".live-info-tabs .live-info-tab").click(function () {
                 $(this).addClass("selected").siblings().removeClass("selected");
                 $(".live-info-tab-details").eq($(this).index()).show().siblings().hide();
@@ -947,33 +970,25 @@
                 $(".android-download-btn").show();
                 $(".ios-download-btn").hide();
             }
-
-           
-
         })
 
         var swiper = new Swiper('.swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
-                color:'#fff'
+                color: '#fff'
             },
 
-        loop: true,
+            loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            
-        });
-        // function playVid() {
-        //     var video = this.document.getElementById('video1');
-        //     video.play();
-        //     $('.play').hide();
-        //     video.setAttribute('controls', true);
 
-        // }
-            
+        });
+        
+        
+
     </script>
 </body>
 
