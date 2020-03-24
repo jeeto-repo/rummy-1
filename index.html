@@ -146,14 +146,14 @@
                                     <div class="rummy-tabs login-tabs rc-tabs">
                                         <section class="rc-tab-detail register selected">
                                             <div class="login-row">
-                                                <input class="login-input" placeholder="Enter Mobile No.Get Link" type="number"
-                                                    aria-label="Mobile Number" name="mobile" />
+                                                <input class="login-input" placeholder="Enter Mobile No.Get Link"
+                                                    type="number" aria-label="Mobile Number" name="mobile" />
                                                 <svg class="feedback-icon svg-icon">
                                                     <use xlink:href="#shape-check-success" />
                                                 </svg>
                                             </div>
                                             <div class="login-row" style="margin-top:32px;">
-                                                <button class="btn btn-yellow login-btn register">
+                                                <button class="btn btn-yellow login-btn register" id="getLinkBtn">
                                                     <span class="login-btn-txt">Get Link</span>
                                                     <svg class="svg-icon spinner-icon">
                                                         <use xlink:href="#shape-spinner" />
@@ -562,7 +562,7 @@
     <div class="download-app-footer  mobile-only">
 
         <div class="download-banner-img">
-            <img class="footer-app-download-button-img"  src="images/footer-img.png">
+            <img class="footer-app-download-button-img" src="images/footer-img.png">
         </div>
         <div class="footer-app-download-button">
             <p class="footer-app-download-button-text">Play Rummy Anytime Anywhere.</p>
@@ -926,24 +926,24 @@
 
     <script>
         $(function () {
-            window.onscroll = function() {
+            window.onscroll = function () {
                 var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
                 var formHeight = document.getElementById("box").offsetHeight;
-				if (scrTop >= 300) {
-					$('.download-option-item').addClass('header-mid-visible').removeClass('header-mid-hidden');
-				} else {
-					// 隐藏
-					$('.download-option-item').addClass('header-mid-hidden').removeClass('header-mid-visible');
+                if (scrTop >= 300) {
+                    $('.download-option-item').addClass('header-mid-visible').removeClass('header-mid-hidden');
+                } else {
+                    // 隐藏
+                    $('.download-option-item').addClass('header-mid-hidden').removeClass('header-mid-visible');
                 }
                 if (scrTop >= formHeight) {
-					$('.download-app-footer').fadeIn();
-				} else {
-					// 隐藏
-					$('.download-app-footer').fadeOut();
-				}
-				
+                    $('.download-app-footer').fadeIn();
+                } else {
+                    // 隐藏
+                    $('.download-app-footer').fadeOut();
+                }
+
             }
-           
+
             $(".live-info-tabs .live-info-tab").click(function () {
                 $(this).addClass("selected").siblings().removeClass("selected");
                 $(".live-info-tab-details").eq($(this).index()).show().siblings().hide();
@@ -970,6 +970,28 @@
                 $(".android-download-btn").show();
                 $(".ios-download-btn").hide();
             }
+            $("#getLinkBtn").click(function(){
+                $.ajax({
+                    url: "http://test-idiom.firethewind.com/site/user/get-link",    //请求的url地址
+                    dataType: "json",   //返回格式为json
+                    async: true,//请求是否异步，默认为异步，这也是ajax重要特性
+                    data: { "id": "value" },    //参数值
+                    type: "POST",   //请求方式
+                    beforeSend: function () {
+                        //请求前的处理
+                    },
+                    success: function (req) {
+                        //请求成功时处理
+                    },
+                    complete: function () {
+                        //请求完成的处理
+                    },
+                    error: function () {
+                        //请求出错处理
+                    }
+                });
+            })
+            
         })
 
         var swiper = new Swiper('.swiper-container', {
@@ -986,8 +1008,8 @@
             },
 
         });
-        
-        
+
+
 
     </script>
 </body>
