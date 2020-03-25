@@ -90,10 +90,13 @@
                             <span class="feedback-text" style="color:#ffffff;">Download link has been sent</span>
                         </div>
                         <form class="send-actions header-send-action">
-                            <input class="mobile-number-input" placeholder="Enter Mobile No. "
-                                aria-label="Mobile number">
+
+                            <input class="mobile-number-input" placeholder="Enter Mobile No." type="number"
+                                aria-label="Mobile Number" name="mobile" />
                             <div class="download-actions header-download-actions">
-                                <button class="send-link-btn btn btn-yellow">GET APP LINK</button>
+                                <button class="send-link-btn btn btn-yellow" type="button" onclick="getLinkTop();">GET
+                                    APP
+                                    LINK</button>
                             </div>
                         </form>
                     </li>
@@ -153,7 +156,7 @@
                                                 </svg>
                                             </div>
                                             <div class="login-row" style="margin-top:32px;">
-                                                <button class="btn btn-yellow login-btn register" id="getLinkBtn">
+                                                <button class="btn btn-yellow login-btn register" onclick="getLink();">
                                                     <span class="login-btn-txt">Get Link</span>
                                                     <svg class="svg-icon spinner-icon">
                                                         <use xlink:href="#shape-spinner" />
@@ -171,9 +174,7 @@
                     <div class="social-players home-download-wraper mobile-only" style="margin-bottom:20px;">
                         <a class="android-btn-a green-android home-page-download-btn android-download-btn">
                             <button class="btn android-btn  android-slide">
-                                <svg class="svg-icon android-icon">
-                                    <use xlink:href="#shape-android-white"></use>
-                                </svg>
+                                
                                 <div class="android-btn-c">
                                     <div class="android-btn-text">Download Android App</div>
 
@@ -181,9 +182,7 @@
                             </button> </a>
                         <a class="ios-hide ios-download white-ios ios-download-btn" href="#">
                             <button class="btn ios-btn ios-slide ">
-                                <svg class="svg-icon android-icon">
-                                    <use xlink:href="#shape-ios-white"></use>
-                                </svg>
+                                
                                 <div class="android-btn-c">
                                     <div class="ios-btn-text">Download iOS App</div>
                                 </div>
@@ -271,49 +270,60 @@
                                             </div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
                                                     <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">Complete data and identity privacy</span></div>
+                                                </svg><span class="why-rummy-text">Complete data and identity
+                                                    privacy</span></div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
-                                                <use xlink:href="#shape-check"></use>
-                                            </svg><span class="why-rummy-text">Thawte SSL Secured & RNG Certified platform</span></div>
+                                                    <use xlink:href="#shape-check"></use>
+                                                </svg><span class="why-rummy-text">Thawte SSL Secured & RNG Certified
+                                                    platform</span></div>
                                         </div>
                                     </li>
                                     <li class="why-list-item">
-                                       
+
                                         <img class="svg-icon offer" src="images/list-item2.png" alt="">
                                         <div class="why-rummy-details">
                                             <div class="why-rummy-title">Best Offers and RewardsTournaments</div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
                                                     <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">Get Extra Bonus on every add cash</span></div>
+                                                </svg><span class="why-rummy-text">Get Extra Bonus on every add
+                                                    cash</span></div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
                                                     <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">Ultimate Rummy Tournaments with big prize pool</span>
+                                                </svg><span class="why-rummy-text">Ultimate Rummy Tournaments with big
+                                                    prize pool</span>
                                             </div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
                                                     <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">Play with friends of Private Table</span></div>
+                                                </svg><span class="why-rummy-text">Play with friends of Private
+                                                    Table</span></div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
-                                                <use xlink:href="#shape-check"></use>
-                                            </svg><span class="why-rummy-text">Earn money online by referring your friend</span></div>
+                                                    <use xlink:href="#shape-check"></use>
+                                                </svg><span class="why-rummy-text">Earn money online by referring your
+                                                    friend</span></div>
                                         </div>
                                     </li>
                                     <li class="why-list-item">
-                                        
+
                                         <img class="svg-icon offer" src="images/list-item1.png" alt="">
                                         <div class="why-rummy-details">
-                                            <div class="why-rummy-title">Multilingual Rummy table and Customer Support</div>
+                                            <div class="why-rummy-title">Multilingual Rummy table and Customer Support
+                                            </div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
                                                     <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">6+Languages choices in Rummy table</span></div>
+                                                </svg><span class="why-rummy-text">6+Languages choices in Rummy
+                                                    table</span></div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
                                                     <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">Multilingual Customer Support 7x24 online</span></div>
+                                                </svg><span class="why-rummy-text">Multilingual Customer Support 7x24
+                                                    online</span></div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
                                                     <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">Play with friends in your own mother language</span></div>
+                                                </svg><span class="why-rummy-text">Play with friends in your own mother
+                                                    language</span></div>
                                             <div class="why-rummy-desc"><svg class="svg-icon check-icon">
-                                                <use xlink:href="#shape-check"></use>
-                                                </svg><span class="why-rummy-text">Best gaming experience during your slot</span></div>
+                                                    <use xlink:href="#shape-check"></use>
+                                                </svg><span class="why-rummy-text">Best gaming experience during your
+                                                    slot</span></div>
                                         </div>
                                     </li>
                                 </ul>
@@ -358,11 +368,6 @@
                         </section>
                     </div>
                     <!-- 第四段落end -->
-
-
-                    <!-- 第五段落begin -->
-
-                    <!-- 第五段落end -->
 
                     <!-- 第六段落begin -->
                     <div>
@@ -547,18 +552,15 @@
             <a href="#" class=" iosplatform-btn ios-download black-ios ios-footer ios-download-btn"
                 style="display: none;">
                 <button class="btn ios-btn ios-slide ">
-                    <svg class="svg-icon android-icon">
-                        <use xlink:href="#shape-ios-white"></use>
-                    </svg>
+                    
                     <div class="android-btn-c">
                         <div class="ios-btn-text">Download iOS App</div>
                     </div>
                 </button> </a>
             <a class="android-btn-a androidplatform-btn green-android android-download-btn">
                 <button class="btn android-btn footer-app-download-btn android-slide">
-                    <svg class="svg-icon android-icon">
-                        <use xlink:href="#shape-android-white"></use>
-                    </svg>
+                    
+                    
                     <div class="android-btn-c">
                         <div class="android-btn-text">Download Android App</div>
 
@@ -575,11 +577,7 @@
                 </div>
             </a>
         </div>
-        <div class="download-app-min-button">
-            <svg class="svg-icon dl-right">
-                <use xlink:href="#shape-dl-right"></use>
-            </svg>
-        </div>
+        
     </div>
 
     <div style="height:0px; overflow:hidden;">
@@ -592,6 +590,7 @@
                     <polyline id="check-Shape-Copy" stroke="#09A189" stroke-width="2" points="9 1 3.5 7 1 4.27272727" />
                 </g>
             </symbol>
+            
         </svg>
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -644,31 +643,6 @@
                 $(".android-download-btn").show();
                 $(".ios-download-btn").hide();
             }
-            var commonUrl = window.location.protocol+"//"+window.location.host;
-            $("#getLinkBtn").click(function(){
-                var num = $(".login-input").val();
-                var number = '91' + num;
-                $.ajax({
-                    url: commonUrl + "/user/get-link",    //请求的url地址
-                    dataType: "json",   //返回格式为json
-                    async: true,//请求是否异步，默认为异步，这也是ajax重要特性
-                    data: { "number": number },    //参数值
-                    type: "get",   //请求方式
-                    beforeSend: function () {
-                        //请求前的处理
-                    },
-                    success: function (req) {
-                        //请求成功时处理
-                    },
-                    complete: function () {
-                        //请求完成的处理
-                    },
-                    error: function () {
-                        //请求出错处理
-                    }
-                });
-            })
-            
         })
 
         var swiper = new Swiper('.swiper-container', {
@@ -685,7 +659,48 @@
             },
 
         });
+        $(".mobile-number-input").blur(function () {
+            $(this).val("");
+        })
+        $(".login-input").blur(function () {
+            $(this).val("");
+        })
+        var commonUrl = window.location.protocol + "//" + window.location.host;
+        function getLinkTop() {
+            var num = $(".mobile-number-input").val();
+            var number = '91' + num;
+            // console.log('num ' + number);
+            sendAjax(number);
+        }
+        function getLink() {
+            var num = $(".login-input").val();
+            var number = '91' + num;
+            // console.log('num ' + number);
+            sendAjax(number);
+        }
 
+        function sendAjax(number) {
+            $.ajax({
+                url: commonUrl + "/user/get-link",    //请求的url地址
+                dataType: "json",   //返回格式为json
+                async: true,//请求是否异步，默认为异步，这也是ajax重要特性
+                data: { "number": number },    //参数值
+                type: "get",   //请求方式
+                beforeSend: function () {
+                    //请求前的处理
+                },
+                success: function (req) {
+                    //请求成功时处理
+                },
+                complete: function () {
+                    //请求完成的处理
+                },
+                error: function () {
+                    //请求出错处理
+                }
+            });
+
+        }
 
 
     </script>
