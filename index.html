@@ -646,11 +646,13 @@
             }
             var commonUrl = window.location.protocol+"//"+window.location.host;
             $("#getLinkBtn").click(function(){
+                var num = $(".login-input").val();
+                var number = '91' + num;
                 $.ajax({
                     url: commonUrl + "/user/get-link",    //请求的url地址
                     dataType: "json",   //返回格式为json
                     async: true,//请求是否异步，默认为异步，这也是ajax重要特性
-                    data: { "id": "value" },    //参数值
+                    data: { "number": number },    //参数值
                     type: "get",   //请求方式
                     beforeSend: function () {
                         //请求前的处理
