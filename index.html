@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-IN" class="no-js no-svg">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -62,7 +61,6 @@
         background-color: #fff;
     }
 </style>
-
 <body
     class="home page-template-default page page-id-71 twentyseventeen-front-page has-header-image page-two-column colors-light">
     <div id="page" class="site">
@@ -75,24 +73,29 @@
                             <use xlink:href="#shape-hamburger" />
                         </svg>
                     </li>
-
                     <li class="header-link" title="JeetoRummy"><a href="#" title="JeetoRummy" class=" header-logo"></a>
                     </li>
-
                     <li class="header-link download-option-item desktop-only header-mid-hidden">
-                        <div class="feedback-msg error" style="display: none;">
+                        <div class="feedback-msg error error-box" style="display: none;">
                             <svg class=" error feedback-icon svg-icon">
                                 <use xlink:href="#shape-error"></use>
                             </svg>
-                            <span class="feedback-text" style="color:#ffffff;">Please enter a valid mobile number</span>
+                            <span class="feedback-text" id="errorTipsTop" style="color:#ffffff;">Please enter a valid mobile number</span>
+                        </div>
+                        <div class="feedback-msg success success-box" style="display: none;">
+                            <svg class=" success feedback-icon svg-icon" style="background: #6EB123;">
+                                <use xlink:href="#shape-check-success"></use>
+                            </svg>
+
+                            <span class="feedback-text" style="color:#ffffff;">Successfully sent the SMS to
+                                <span id="success-content"></span>
+                            </span>
                         </div>
                         <form class="send-actions header-send-action">
-
                             <input class="mobile-number-input" placeholder="Enter Mobile No." type="number"
                                 aria-label="Mobile Number" name="mobile" />
                             <div class="download-actions header-download-actions">
-                                <button class="send-link-btn btn btn-yellow" type="button" onclick="getLinkTop();">GET
-                                    APP
+                                <button class="send-link-btn btn btn-yellow" type="button" id="getTopLink">GET APP
                                     LINK</button>
                             </div>
                         </form>
@@ -100,7 +103,6 @@
                 </ul>
             </div>
         </header>
-
         <div class="site-content-contain" id="main-content">
             <div id="content" class="site-content">
                 <div class="wrap">
@@ -114,7 +116,7 @@
                                         <li class="swiper-slide carousel-cell carousel-home-item">
                                             <a href="#"> <img src="images/lunbo1.jpg" class="home-banner-img" /></a>
                                         </li>
-                                        <li class="swiper-slide carousel-cell carousel-home-item">
+                                        <!-- <li class="swiper-slide carousel-cell carousel-home-item">
                                             <a href="#"> <img src="images/lunbo2.jpg" class="home-banner-img" /></a>
                                         </li>
                                         <li class="swiper-slide carousel-cell carousel-home-item">
@@ -122,14 +124,14 @@
                                         </li>
                                         <li class="swiper-slide carousel-cell carousel-home-item">
                                             <a href="#"> <img src="images/lunbo4.jpg" class="home-banner-img" /></a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 <!-- Add Pagination -->
-                                <div class="swiper-pagination mobile-only"></div>
+                                <!-- <div class="swiper-pagination mobile-only"></div> -->
                                 <!-- Add Arrows -->
-                                <div class="swiper-button-next desktop-only"></div>
-                                <div class="swiper-button-prev desktop-only"></div>
+                                <!-- <div class="swiper-button-next desktop-only"></div>
+                                <div class="swiper-button-prev desktop-only"></div> -->
                             </div>
                         </div>
                         <!-- 轮播图end -->
@@ -146,15 +148,24 @@
                                     <div class="rummy-tabs login-tabs rc-tabs">
                                         <section class="rc-tab-detail register selected">
                                             <div class="login-row">
+                                                <span class="otp-msg" style="display: none;">
+                                                    OTP sent to <span id="otp-num"></span>
+                                                </span>
+                                            </div>
+                                            <div class="login-row">
                                                 <input class="login-input" placeholder="Enter Mobile No.Get Link"
                                                     type="number" aria-label="Mobile Number" name="mobile" />
                                                 <svg class="feedback-icon svg-icon">
                                                     <use xlink:href="#shape-check-success" />
                                                 </svg>
                                             </div>
-                                            <div class="alert danger" style="display: none;">Please enter a valid 10 digit mobile number.</div>
-                                            <div class="login-row" style="margin-top:32px;">
-                                                <button class="btn btn-yellow login-btn register" onclick="getLink();">
+                                            <div class="login-row daojishi" style="display: none;">
+                                                <span id="otp-feedback-text">Request for a new one in <span id="djs"></span> sec</span>
+                                            </div>
+                                            <div class="alert danger" id="errorTips" style="display: none;">Please enter a valid 10
+                                                digit mobile number.</div>
+                                            <div class="login-row get-link-btn" style="margin-top:32px;">
+                                                <button class="btn btn-yellow login-btn register" id="getLink">
                                                     <span class="login-btn-txt">Get Link</span>
                                                     <svg class="svg-icon spinner-icon">
                                                         <use xlink:href="#shape-spinner" />
@@ -168,19 +179,15 @@
                         </div>
                         <!-- 登录表单end -->
                     </div>
-
                     <div class="social-players home-download-wraper mobile-only" style="margin-bottom:20px;">
                         <a class="android-btn-a green-android home-page-download-btn android-download-btn">
                             <button class="btn android-btn  android-slide">
-                                
                                 <div class="android-btn-c">
                                     <div class="android-btn-text">Download Android App</div>
-
                                 </div>
                             </button> </a>
                         <a class="ios-hide ios-download white-ios ios-download-btn" href="#">
                             <button class="btn ios-btn ios-slide ">
-                                
                                 <div class="android-btn-c">
                                     <div class="ios-btn-text">Download iOS App</div>
                                 </div>
@@ -188,7 +195,6 @@
                         <div class="download-feedback  download-feedback-home-page ">
                         </div>
                     </div>
-
                     <!-- 播放器片段begin 二 -->
                     <section class="why-jeeto-rummy wraper">
                         <!-- remove this after diwali -->
@@ -238,24 +244,81 @@
                                                                 id="white-play-Combined-Shape" />
                                                         </g>
                                                     </symbol>
-                                                    
+
                                                     <symbol viewBox="0 0 52 52" id="shape-error">
                                                         <title>error</title>
                                                         <desc>By RummyCulture.</desc> <!--  52.1 (67048) -  -->
-                                                        <g id="error-Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                            <g id="error-rc-style-guide" transform="translate(-435.000000, -4006.000000)">
-                                                                <g id="error-error" transform="translate(437.000000, 4007.000000)">
+                                                        <g id="error-Page-1" stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd">
+                                                            <g id="error-rc-style-guide"
+                                                                transform="translate(-435.000000, -4006.000000)">
+                                                                <g id="error-error"
+                                                                    transform="translate(437.000000, 4007.000000)">
                                                                     <g id="error-Rectangle-5-Copy-5">
-                                                                        <use fill="black" fill-opacity="1" filter="url(#error-filter-3)" xlink:href="#error-path-2" />
-                                                                        <use fill="url(#error-linearGradient-1)" fill-rule="evenodd" xlink:href="#error-path-2" />
+                                                                        <use fill="black" fill-opacity="1"
+                                                                            filter="url(#error-filter-3)"
+                                                                            xlink:href="#error-path-2" />
+                                                                        <use fill="url(#error-linearGradient-1)"
+                                                                            fill-rule="evenodd"
+                                                                            xlink:href="#error-path-2" />
                                                                     </g>
-                                                                    <g id="error-warning" transform="translate(11.000000, 11.000000)" fill="#FFFFFF">
-                                                                        <path d="M12.9853183,16.8636054 C12.2592402,16.8636054 11.650616,17.4770583 11.650616,18.2088969 C11.650616,18.9407354 12.2592402,19.5541883 12.9853183,19.5541883 C13.6847023,19.5541883 14.3200205,18.9407354 14.2879877,18.2411839 C14.3200205,17.4716771 13.7167351,16.8636054 12.9853183,16.8636054 Z" id="error-Path" />
-                                                                        <path d="M25.3393224,21.6313184 C26.1775154,20.1730224 26.1828542,18.4349058 25.35,16.981991 L16.9894251,2.38826906 C16.1619097,0.919210762 14.6670431,0.0474618834 12.9906571,0.0474618834 C11.314271,0.0474618834 9.81940452,0.924591928 8.99188912,2.38288789 L0.62063655,16.9927534 C-0.212217659,18.4618117 -0.20687885,20.2106906 0.636652977,21.6689865 C1.46950719,23.111139 2.95903491,23.9775067 4.62474333,23.9775067 L21.324538,23.9775067 C22.9955852,23.9775067 24.4957906,23.1003767 25.3393224,21.6313184 Z M23.5241273,20.5766099 C23.0596509,21.3837848 22.2374743,21.8627085 21.3191992,21.8627085 L4.61940452,21.8627085 C3.71180698,21.8627085 2.8949692,21.3945471 2.44117043,20.6035157 C1.98203285,19.801722 1.97669405,18.8438744 2.43583162,18.0366996 L10.8070842,3.43221525 C11.260883,2.63042152 12.0723819,2.15687892 12.9906571,2.15687892 C13.9035934,2.15687892 14.7204312,2.63580269 15.17423,3.43759641 L23.5401437,18.0420807 C23.9886037,18.8277309 23.9832649,19.7748161 23.5241273,20.5766099 Z" id="error-Shape" fill-rule="nonzero" />
-                                                                        <path d="M12.6543121,7.41965919 C12.0189938,7.60261883 11.623922,8.18378475 11.623922,8.88871749 C11.6559548,9.3138296 11.6826489,9.74432287 11.7146817,10.169435 C11.8054415,11.7891659 11.8962012,13.3766099 11.986961,14.9963408 C12.0189938,15.5452197 12.4407598,15.943426 12.9853183,15.943426 C13.5298768,15.943426 13.9569815,15.5183139 13.9836756,14.9640538 C13.9836756,14.6304215 13.9836756,14.3236951 14.0157084,13.9846816 C14.0744353,12.9461166 14.138501,11.9075516 14.1972279,10.8689865 C14.2292608,10.1963408 14.2879877,9.52369507 14.3200205,8.85104933 C14.3200205,8.60889686 14.2879877,8.39365022 14.1972279,8.17840359 C13.9249487,7.575713 13.2896304,7.26898655 12.6543121,7.41965919 Z" id="error-Path" />
+                                                                    <g id="error-warning"
+                                                                        transform="translate(11.000000, 11.000000)"
+                                                                        fill="#FFFFFF">
+                                                                        <path
+                                                                            d="M12.9853183,16.8636054 C12.2592402,16.8636054 11.650616,17.4770583 11.650616,18.2088969 C11.650616,18.9407354 12.2592402,19.5541883 12.9853183,19.5541883 C13.6847023,19.5541883 14.3200205,18.9407354 14.2879877,18.2411839 C14.3200205,17.4716771 13.7167351,16.8636054 12.9853183,16.8636054 Z"
+                                                                            id="error-Path" />
+                                                                        <path
+                                                                            d="M25.3393224,21.6313184 C26.1775154,20.1730224 26.1828542,18.4349058 25.35,16.981991 L16.9894251,2.38826906 C16.1619097,0.919210762 14.6670431,0.0474618834 12.9906571,0.0474618834 C11.314271,0.0474618834 9.81940452,0.924591928 8.99188912,2.38288789 L0.62063655,16.9927534 C-0.212217659,18.4618117 -0.20687885,20.2106906 0.636652977,21.6689865 C1.46950719,23.111139 2.95903491,23.9775067 4.62474333,23.9775067 L21.324538,23.9775067 C22.9955852,23.9775067 24.4957906,23.1003767 25.3393224,21.6313184 Z M23.5241273,20.5766099 C23.0596509,21.3837848 22.2374743,21.8627085 21.3191992,21.8627085 L4.61940452,21.8627085 C3.71180698,21.8627085 2.8949692,21.3945471 2.44117043,20.6035157 C1.98203285,19.801722 1.97669405,18.8438744 2.43583162,18.0366996 L10.8070842,3.43221525 C11.260883,2.63042152 12.0723819,2.15687892 12.9906571,2.15687892 C13.9035934,2.15687892 14.7204312,2.63580269 15.17423,3.43759641 L23.5401437,18.0420807 C23.9886037,18.8277309 23.9832649,19.7748161 23.5241273,20.5766099 Z"
+                                                                            id="error-Shape" fill-rule="nonzero" />
+                                                                        <path
+                                                                            d="M12.6543121,7.41965919 C12.0189938,7.60261883 11.623922,8.18378475 11.623922,8.88871749 C11.6559548,9.3138296 11.6826489,9.74432287 11.7146817,10.169435 C11.8054415,11.7891659 11.8962012,13.3766099 11.986961,14.9963408 C12.0189938,15.5452197 12.4407598,15.943426 12.9853183,15.943426 C13.5298768,15.943426 13.9569815,15.5183139 13.9836756,14.9640538 C13.9836756,14.6304215 13.9836756,14.3236951 14.0157084,13.9846816 C14.0744353,12.9461166 14.138501,11.9075516 14.1972279,10.8689865 C14.2292608,10.1963408 14.2879877,9.52369507 14.3200205,8.85104933 C14.3200205,8.60889686 14.2879877,8.39365022 14.1972279,8.17840359 C13.9249487,7.575713 13.2896304,7.26898655 12.6543121,7.41965919 Z"
+                                                                            id="error-Path" />
                                                                     </g>
                                                                 </g>
                                                             </g>
+                                                        </g>
+                                                    </symbol>
+                                                    <symbol viewBox="0 0 52 52" id="shape-check-success">
+                                                        <title>success</title>
+                                                        <desc>By RummyCulture.</desc> <!--  52.1 (67048) -  -->
+                                                        <g id="check-success-Page-1" stroke="none" stroke-width="1"
+                                                            fill="none" fill-rule="evenodd">
+                                                            <g id="check-success-rc-style-guide"
+                                                                transform="translate(-435.000000, -3830.000000)">
+                                                                <g id="check-success-success"
+                                                                    transform="translate(437.000000, 3831.000000)">
+                                                                    <g id="check-success-Rectangle-5-Copy-5">
+                                                                        <g fill="black" fill-opacity="1"
+                                                                            filter="url(#check-success-filter-3)">
+                                                                            <rect id="check-success-path-2" x="0" y="0"
+                                                                                width="48" height="48" rx="24"></rect>
+                                                                        </g>
+                                                                        <g fill="url(#check-success-linearGradient-1)"
+                                                                            fill-rule="evenodd">
+                                                                            <rect id="check-success-path-2" x="0" y="0"
+                                                                                width="48" height="48" rx="24"></rect>
+                                                                        </g>
+                                                                    </g>
+                                                                    <g id="check-success-check"
+                                                                        transform="translate(16.000000, 19.000000)"
+                                                                        stroke="#FFFFFF" stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-width="3">
+                                                                        <polyline id="check-success-Shape"
+                                                                            points="16 0 5 11 0 6"></polyline>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </symbol>
+                                                    <symbol viewBox="0 0 10 8" id="shape-check">
+                                                        <title>check</title>
+                                                        <desc>By RummyCulture.</desc> <!--  51.3 (57544) -  -->
+                                                        <g id="check-check" stroke="none" stroke-width="1" fill="none"
+                                                            fill-rule="evenodd" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <polyline id="check-Shape-Copy" stroke="#09A189"
+                                                                stroke-width="2" points="9 1 3.5 7 1 4.27272727" />
                                                         </g>
                                                     </symbol>
                                                 </svg>
@@ -297,7 +360,6 @@
                                         </div>
                                     </li>
                                     <li class="why-list-item">
-
                                         <img class="svg-icon offer" src="images/list-item2.png" alt="">
                                         <div class="why-rummy-details">
                                             <div class="why-rummy-title">Best Offers and RewardsTournaments</div>
@@ -321,7 +383,6 @@
                                         </div>
                                     </li>
                                     <li class="why-list-item">
-
                                         <img class="svg-icon offer" src="images/list-item1.png" alt="">
                                         <div class="why-rummy-details">
                                             <div class="why-rummy-title">Multilingual Rummy table and Customer Support
@@ -349,7 +410,6 @@
                         </section>
                     </div>
                     <!-- 第三段落end -->
-
                     <!-- 第四段落begin -->
                     <div>
                         <section class="live-info rummy-tabs">
@@ -360,7 +420,6 @@
                                             class="tab-pill-text">Practice</span>
                                         <div class="selected-indicator"></div>
                                     </li>
-
                                 </ul>
                                 <!-- <div class="tips-box"> the feature is comming soon</div> -->
                                 <div class="live-info-tab-details rc-tab-detail practice rcarousel selected">
@@ -379,21 +438,16 @@
                                         </li>
                                     </ul>
                                 </div>
-
-
-
                             </div>
                         </section>
                     </div>
                     <!-- 第四段落end -->
-
                     <!-- 第六段落begin -->
                     <div>
                         <section class="rummy-faq rc-accordion why-play" style="background: #fff;">
                             <div class="desktop-wrap">
                                 <h1 class=""><span class="faq-title-text section-title" style="margin: 1em 0;">Play
                                         Rummy Game and Earn Money Online &nbsp;</span></h1>
-
                                 <div class="faq-accordian">
                                     <div class="tabs active">
                                         <h2 class="tab-label">About Jeeto Rummy</h2>
@@ -462,12 +516,10 @@
                                             <p><strong>8. Supports over 5+ Local Languages.</strong></p>
                                         </div>
                                     </div>
-
                                 </div>
                         </section>
                     </div>
                     <!-- 第六段落end -->
-
                     <!-- 第七段落begin -->
                     <div>
                         <section id="rc-experience" class="rc-experience"><svg
@@ -497,11 +549,6 @@
                         </section>
                     </div>
                     <!-- 第七段落end -->
-
-
-                    <!-- 第八段落begin -->
-                    <!-- 第八段落end -->
-
                     <!-- 第九段落begin -->
                     <footer id="colophon" class="site-footer" role="contentinfo">
                         <div class="desktop-wrap">
@@ -528,7 +575,6 @@
                                         <li class="link-item"><a href="pages/contact.html" class="link-item-a">Contact
                                                 Us</a></li>
                                     </ul>
-
                                 </div>
                                 <div class="link-section">
                                     <h5 class="link-section-title">Links</h5>
@@ -539,10 +585,7 @@
 
                                     </ul>
                                 </div>
-
                             </div>
-
-
                             <div class="footer-section clearfix">
                                 <div class="footer-concern">In case of any concern, <a href="pages/contact.html"
                                         class="link-item-a">Contact
@@ -561,7 +604,6 @@
     </div>
     <!-- show-download-app-footer -->
     <div class="download-app-footer  mobile-only">
-
         <div class="download-banner-img">
             <img class="footer-app-download-button-img" src="images/footer-img.png">
         </div>
@@ -570,26 +612,19 @@
             <a href="#" class=" iosplatform-btn ios-download black-ios ios-footer ios-download-btn"
                 style="display: none;">
                 <button class="btn ios-btn ios-slide ">
-                    
                     <div class="android-btn-c">
                         <div class="ios-btn-text">Download iOS App</div>
                     </div>
                 </button> </a>
             <a class="android-btn-a androidplatform-btn green-android android-download-btn">
                 <button class="btn android-btn footer-app-download-btn android-slide">
-                    
-                    
                     <div class="android-btn-c">
                         <div class="android-btn-text">Download Android App</div>
-
                     </div>
                 </button>
-                
             </a>
         </div>
-        
     </div>
-
     <div style="height:0px; overflow:hidden;">
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <symbol viewBox="0 0 10 8" id="shape-check">
@@ -600,131 +635,12 @@
                     <polyline id="check-Shape-Copy" stroke="#09A189" stroke-width="2" points="9 1 3.5 7 1 4.27272727" />
                 </g>
             </symbol>
-            
         </svg>
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/index.js"></script>
-
     <script>
-        $(function () {
-            window.onscroll = function () {
-                var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
-                var formHeight = document.getElementById("box").offsetHeight;
-                if (scrTop >= 300) {
-                    $('.download-option-item').addClass('header-mid-visible').removeClass('header-mid-hidden');
-                } else {
-                    // 隐藏
-                    $('.download-option-item').addClass('header-mid-hidden').removeClass('header-mid-visible');
-                }
-                if (scrTop >= formHeight) {
-                    $('.download-app-footer').fadeIn();
-                } else {
-                    // 隐藏
-                    $('.download-app-footer').fadeOut();
-                }
-
-            }
-
-            $(".live-info-tabs .live-info-tab").click(function () {
-                $(this).addClass("selected").siblings().removeClass("selected");
-                $(".live-info-tab-details").eq($(this).index()).show().siblings().hide();
-            })
-            $(".tab-pills .tab-pill").click(function () {
-                $(this).addClass("selected").siblings().removeClass("selected");
-                $(".rummy-games").eq($(this).index()).addClass("selected").siblings().removeClass("selected");
-
-            })
-            $(".tabs").click(function () {
-                $(this).addClass("active").siblings().removeClass("active");
-                $(this).next().show().siblings('.tab-content').hide();
-            })
-            var u = navigator.userAgent;
-            var ua = navigator.userAgent.toLowerCase();
-            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-            if (isiOS) {
-                $(".ios-download-btn").show();
-                $(".android-download-btn").hide();
-
-
-            } else if (isAndroid) {
-                $(".android-download-btn").show();
-                $(".ios-download-btn").hide();
-            }
-        })
-
-        var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-                color: '#fff'
-            },
-
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-        });
-        // $(".mobile-number-input").blur(function () {
-        //     $(this).val("");
-        // })
-        // $(".login-input").blur(function () {
-        //     $(this).val("");
-        // })
-        var commonUrl = window.location.protocol + "//" + window.location.host;
-        function getLinkTop() {
-            var num = $(".mobile-number-input").val();
-            if(!num || num.length!= 10){
-               $(".feedback-msg").fadeIn();
-               return false
-            }
-            $(".feedback-msg .error").hide();
-            $(".feedback-msg .success").show();
-            var number = '91' + num;
-            sendAjax(number);
-        }
-        function getLink() {
-            var num = $(".login-input").val();
-            if(!num || num.length!= 10){
-               $(".alert").fadeIn();
-               return false
-            }
-            $(".alert").fadeOut();
-            var number = '91' + num;
-            sendAjax(number);
-            
-            
-        }
-
-        function sendAjax(number) {
-            $.ajax({
-                url: commonUrl + "/user/get-link",    //请求的url地址
-                dataType: "json",   //返回格式为json
-                async: true,//请求是否异步，默认为异步，这也是ajax重要特性
-                data: { "number": number },    //参数值
-                type: "POST",   //请求方式
-                beforeSend: function () {
-                    //请求前的处理
-                },
-                success: function (req) {
-                    //请求成功时处理
-                },
-                complete: function () {
-                    //请求完成的处理
-                },
-                error: function () {
-                    //请求出错处理
-                }
-            });
-
-        }
-
-
     </script>
 </body>
-
 </html>
