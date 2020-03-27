@@ -100,10 +100,10 @@ $(function () {
                 //请求出错处理
                 if(getLink == "getTopLink"){
                     $('.error-box').show();
-                    $("#errorTipsTop").html(req.error)
+                    $("#errorTipsTop").html(req.result)
                 }else{
                     $('.alert').show();
-                    $("#errorTips").html(req.error)
+                    $("#errorTips").html(req.result)
                 }
                 
             }
