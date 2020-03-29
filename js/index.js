@@ -91,6 +91,14 @@ $(function () {
                             $(".otp-msg").hide();
                         }, 5000)
                     }
+                }else{
+                    if(getLink == "getTopLink"){
+                        $('.error-box').show();
+                        $("#errorTipsTop").html(req.result)
+                    }else{
+                        $('.alert').show();
+                        $("#errorTips").html(req.result)
+                    }
                 }
             },
             complete: function () {
@@ -98,13 +106,7 @@ $(function () {
             },
             error: function (req) {
                 //请求出错处理
-                if(getLink == "getTopLink"){
-                    $('.error-box').show();
-                    $("#errorTipsTop").html(req.result)
-                }else{
-                    $('.alert').show();
-                    $("#errorTips").html(req.result)
-                }
+                
                 
             }
         });
